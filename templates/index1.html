@@ -1,0 +1,82 @@
+ {% extends "base.html" %} {% block content %}
+
+<div class="topdiv">
+    <h1 class="he">Restore Damaged images</h1> <br><br>
+    <i> <h2>Exploring AI Limits</h2> </i>
+</div>
+
+<br><br>
+
+<div class="thirddiv container">
+    <div class="thirddivin">
+        <b><h1>Select Image that you want to restore</h1> </b><br>
+        <form id="upload-file" method="post" enctype="multipart/form-data">
+            <br>
+            <label for="imageUpload1" class="upload-label">Select Image</label>
+            <input type="file" name="file" id="imageUpload1" accept=".png, .jpg, .jpeg">
+            <div class="image-section" style="display:none;">
+                <div class="img-preview container imgprv">
+                    <div id="imagePreview1"></div>
+                </div>
+            </div>
+            <label for="imageUpload2" class="upload-label" style="display: none;">Select Mask</label>
+            <input type="file" name="mask" id="imageUpload2" accept=".png, .jpg, .jpeg" style="display: none;">
+            <div class="image-section2" style="display:none;">
+                <div class="img-preview container imgprv">
+                    <div id="imagePreview2"></div>
+                </div>
+            </div>
+        </form>
+
+        <div>
+            <button type="button" class="btn btn-dark" id="btn-predict" style="display: none;">Process Me</button>
+
+        </div>
+
+        <div class="loader" style="display:none;">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+<br><br>
+
+<h3 id="result">
+    <span>The Corrected image with no damages:</span> <br> <br>
+    <img src="" id="final_mask_image" alt="Final Mask Image" style="display: none;"> <br> <br>
+    <span><h5>Mask- Segnet</h5></span>
+    <span><h5>Damage Restored- 93%</h5></span> <br>
+</h3>
+
+<br><br>
+
+<div class="container middiv">
+    <h2 class="mhead"><b>Unleash the Power of AI</b></h2>
+    <p class="mhead">Got any old images that are damaged in some manner or distorted. Dont worry we are here to help you.</p>
+    <div class="mouter">
+        <div class="minsideimg">
+            <img src="static/dm3.jpg" alt="">
+        </div>
+        <div class="minsideimg"><img class="arrowico" src="static/arrow.gif" alt=""></div>
+        <div class="minsideimg">
+            <img src="static/restore1.jpg" alt="">
+        </div>
+    </div>
+
+</div>
+<br><br>
+<div class="worki">
+    <b><h1>Working of model:</h1></b>
+    <h3>We have build a custom AI algorithm with Tensorflow and Keras without using any premade models. Masking is done to keep the quality of distorted pixels. Then the image is processed with segmentation for further execution. Segnet is integrated with
+        CN layer. Quality of model increases overtime. Learning rate is 0.1 for this model. Build and processed on WSGI server.
+    </h3>
+</div>
+
+<div class="made">
+    <h3>Made by: <img src="static\jocker.jpg" alt=""></h3>
+</div>
+
+
+<br><br><br> {% endblock %}

@@ -1,0 +1,185 @@
+.img-preview {
+    width: 256px;
+    height: 256px;
+    border: 5px solid black;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.img-preview>div {
+    width: 100%;
+    height: 100%;
+    background-size: 256px 256px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.upload-label {
+    display: inline-block;
+    padding: 12px 30px;
+    background: black;
+    color: #fff;
+    font-size: 1em;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.upload-label:hover {
+    background: #34495E;
+    color: #39D2B4;
+}
+
+.loader {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.loader div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: black;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.loader div:nth-child(1) {
+    left: 8px;
+    animation: loader1 0.6s infinite;
+}
+
+.loader div:nth-child(2) {
+    left: 8px;
+    animation: loader2 0.6s infinite;
+}
+
+.loader div:nth-child(3) {
+    left: 32px;
+    animation: loader2 0.6s infinite;
+}
+
+.loader div:nth-child(4) {
+    left: 56px;
+    animation: loader3 0.6s infinite;
+}
+
+@keyframes loader1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes loader3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes loader2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+
+body {
+    margin: 0;
+}
+
+.topdiv {
+    text-align: center;
+    padding: 10px;
+    background-image: url("/static/backu.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 420px;
+    color: azure;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Maven Pro', sans-serif;
+    padding-top: 30px;
+}
+
+.he {
+    font-size: 70px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.mhead {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Archivo', sans-serif;
+}
+
+.mouter {
+    display: inline;
+    padding-left: 30px;
+}
+
+.minsideimg {
+    display: inline-block;
+    padding: 20px;
+}
+
+.minsideimg img {
+    width: 300px;
+    height: 400px;
+}
+
+.arrowico {
+    width: 300px;
+    height: 200px;
+}
+
+.thirddivin {
+    text-align: center;
+    font-family: 'Archivo', sans-serif;
+}
+
+.thirddiv {
+    padding: 40px 100px;
+    box-shadow: rgba(5, 136, 150, 0.25) 0px 13px 27px -5px, rgba(67, 152, 154, 0.3) 0px 8px 16px -8px;
+    box-shadow: rgba(5, 136, 150, 0.25) 0px 14px 28px, rgba(67, 152, 154, 0.3) 0px 10px 10px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+.worki {
+    padding: 10px 20px;
+}
+
+.made img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+}
+
+.made {
+    margin: 30px 0 0 0;
+    text-align: center;
+}
+
+#result {
+    margin: 30px;
+    text-align: center;
+    padding: 50px;
+}
